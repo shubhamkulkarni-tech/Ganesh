@@ -43,12 +43,6 @@ export default function Hero({ onOpenModal }: HeroProps) {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#02040f] pt-28 pb-16 px-6 md:px-12"
     >
-      {/* Background Stage Image Overlay (Fallback) */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center z-0 opacity-20 pointer-events-none"
-        style={{ backgroundImage: "url('awards_stage.png')" }}
-      />
-
       {/* Background Stage Video Overlay */}
       <video
         autoPlay
