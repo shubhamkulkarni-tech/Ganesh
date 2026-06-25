@@ -43,11 +43,22 @@ export default function Hero({ onOpenModal }: HeroProps) {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#02040f] pt-28 pb-16 px-6 md:px-12"
     >
-      {/* Background Stage Image Overlay & Spotlights */}
+      {/* Background Stage Image Overlay (Fallback) */}
       <div 
         className="absolute inset-0 bg-cover bg-center z-0 opacity-20 pointer-events-none"
         style={{ backgroundImage: "url('awards_stage.png')" }}
       />
+
+      {/* Background Stage Video Overlay */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-20 pointer-events-none"
+      >
+        <source src="https://cioworld-my.sharepoint.com/personal/ayaan_khan_arabianworldmagazine_ae/_layouts/15/download.aspx?id=%2Fpersonal%2Fayaan%5Fkhan%5Farabianworldmagazine%5Fae%2FDocuments%2FAttachments%2FGLOBAL%20EXCELENCE%20%26%20LEADERSHIP%20AWARDS%2001%2Emp4" type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,rgba(2,4,15,1)_90%)] z-0 pointer-events-none" />
       
       {/* Animated Spotlights */}

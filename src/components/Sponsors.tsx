@@ -1,17 +1,116 @@
 import { Shield, Sparkles, Gem, Radio } from 'lucide-react';
 
+interface Sponsor {
+  name: string;
+  tier: 'platinum' | 'gold' | 'silver' | 'media';
+  type: string;
+  logo?: string;
+}
+
 export default function Sponsors() {
-  const sponsors = [
-    { name: 'AURELIUS GROUP', tier: 'platinum', type: 'Investment Fund' },
-    { name: 'VANGUARD SYSTEMS', tier: 'platinum', type: 'SaaS & Enterprise' },
-    { name: 'NEXUS AUTOMATION', tier: 'platinum', type: 'Robotics & AI' },
-    { name: 'STERLING CAPITAL', tier: 'gold', type: 'Venture Capital' },
-    { name: 'VERTEX ANALYTICS', tier: 'gold', type: 'Data Intelligence' },
-    { name: 'HORIZON DYNAMICS', tier: 'gold', type: 'Green Energy' },
-    { name: 'ORION PHARMA', tier: 'silver', type: 'Biotech' },
-    { name: 'ELEVATE INSIGHTS', tier: 'silver', type: 'Management Consulting' },
-    { name: 'FORBES COUNCIL', tier: 'media', type: 'Publishing Partner' },
-    { name: 'INSIGHTS SUCCESS', tier: 'media', type: 'Media Partner' },
+  const sponsors: Sponsor[] = [
+    {
+      name: 'MSCT BEE Services',
+      tier: 'platinum',
+      type: 'BEE Verification Partner',
+      logo: '/assets/msct.jpeg'
+    },
+    {
+      name: 'African Global Skills Academy',
+      tier: 'platinum',
+      type: 'Skills Development Partner',
+      logo: '/assets/african.jpg'
+    },
+    {
+      name: 'Capital Markets Authority',
+      tier: 'platinum',
+      type: 'Regulatory Partner',
+      logo: '/assets/cma.jpg'
+    },
+    {
+      name: 'Nedbank',
+      tier: 'gold',
+      type: 'Banking Partner',
+      logo: '/assets/nedbank.jpg'
+    },
+    {
+      name: 'Numeral Group',
+      tier: 'gold',
+      type: 'Fintech Partner',
+      logo: ''
+    },
+    {
+      name: 'Saucecode',
+      tier: 'gold',
+      type: 'Technology Partner',
+      logo: ''
+    },
+    {
+      name: 'Sunstone Logistic Systems',
+      tier: 'gold',
+      type: 'Logistics Partner',
+      logo: ''
+    },
+    {
+      name: 'VEA Road Maintenance & Civils',
+      tier: 'silver',
+      type: 'Infrastructure Partner',
+      logo: ''
+    },
+    {
+      name: 'Griot',
+      tier: 'silver',
+      type: 'Investment Partner',
+      logo: ''
+    },
+    {
+      name: 'Central Bank of Nigeria',
+      tier: 'silver',
+      type: 'Central Banking Partner',
+      logo: ''
+    },
+    {
+      name: 'Maloto',
+      tier: 'silver',
+      type: 'Financial Services Partner',
+      logo: ''
+    },
+    {
+      name: 'Shankara People Solutions',
+      tier: 'silver',
+      type: 'Human Capital Partner',
+      logo: ''
+    },
+    {
+      name: 'Iliad Solution Ltd',
+      tier: 'silver',
+      type: 'Payment Validation Partner',
+      logo: ''
+    },
+    {
+      name: 'Insights Success',
+      tier: 'media',
+      type: 'Media Partner',
+      logo: '/assets/is.jpg'
+    },
+    {
+      name: 'CIO Look',
+      tier: 'media',
+      type: 'Media Partner',
+      logo: '/assets/ciolook.jpg'
+    },
+    {
+      name: 'CIO World',
+      tier: 'media',
+      type: 'Media Partner',
+      logo: '/assets/cioworld.jpg'
+    },
+    {
+      name: 'Women World',
+      tier: 'media',
+      type: 'Media Partner',
+      logo: '/assets/women_world.jpg'
+    }
   ];
 
   // Separate list for marquee to create continuous loop
@@ -54,7 +153,7 @@ export default function Sponsors() {
                 key={idx}
                 className="flex items-center gap-2 border border-gold-500/10 bg-[#121212]/30 px-6 py-3 rounded-lg hover:border-luxury-gold transition-colors duration-300 pointer-events-none"
               >
-                <div className="text-[11px] font-sans tracking-widest text-gray-500 uppercase font-bold mr-2">
+                <div className="text-[11px] font-sans tracking-widest text-gold-500/85 uppercase font-bold mr-2">
                   {item.tier}
                 </div>
                 <div className="font-serif text-sm font-semibold text-white tracking-widest">
@@ -79,12 +178,24 @@ export default function Sponsors() {
               {sponsors.filter(s => s.tier === 'platinum').map((sponsor, index) => (
                 <div 
                   key={index}
-                  className="glass-card rounded-xl p-8 border border-white/10 hover:border-white/30 text-center flex flex-col justify-center items-center h-32 hover:scale-102 transition-all duration-300"
+                  className="group glass-card rounded-xl p-6 border border-white/10 hover:border-white/30 text-center flex flex-col justify-center items-center h-40 hover:scale-105 transition-all duration-300"
                 >
-                  <span className="font-serif text-lg font-extrabold tracking-widest text-white">
-                    {sponsor.name}
-                  </span>
-                  <span className="text-[10px] text-gray-500 uppercase font-semibold tracking-wider mt-1">
+                  {sponsor.logo ? (
+                    <div className="w-full h-16 bg-white/95 group-hover:bg-white rounded-lg p-2.5 flex items-center justify-center mb-3 transition-all duration-300">
+                      <img 
+                        src={sponsor.logo} 
+                        alt={sponsor.name} 
+                        className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" 
+                      />
+                    </div>
+                  ) : (
+                    <div className="h-16 flex items-center justify-center mb-3">
+                      <span className="font-serif text-lg font-extrabold tracking-widest text-white group-hover:text-luxury-gold transition-colors duration-300">
+                        {sponsor.name}
+                      </span>
+                    </div>
+                  )}
+                  <span className="text-[10px] text-gray-400 uppercase font-semibold tracking-wider group-hover:text-luxury-gold transition-colors duration-300">
                     {sponsor.type}
                   </span>
                 </div>
@@ -103,17 +214,29 @@ export default function Sponsors() {
                   Gold Sponsors
                 </h4>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {sponsors.filter(s => s.tier === 'gold').map((sponsor, index) => (
                   <div 
                     key={index}
-                    className="glass-card rounded-xl p-5 border border-gold-500/10 hover:border-luxury-gold/40 text-center flex flex-col justify-center items-center h-24 hover:scale-102 transition-all duration-300"
+                    className="group glass-card rounded-xl p-5 border border-gold-500/10 hover:border-luxury-gold/40 text-center flex flex-col justify-center items-center h-32 hover:scale-105 transition-all duration-300"
                   >
-                    <span className="font-serif text-sm font-bold tracking-widest text-gray-200">
-                      {sponsor.name.replace(' DYNAMICS', '').replace(' CAPITAL', '').replace(' ANALYTICS', '')}
-                    </span>
-                    <span className="text-[8px] text-gray-500 uppercase tracking-widest mt-1">
-                      {sponsor.name.split(' ').pop()}
+                    {sponsor.logo ? (
+                      <div className="w-full h-12 bg-white/95 group-hover:bg-white rounded-lg p-1.5 flex items-center justify-center mb-2 transition-all duration-300">
+                        <img 
+                          src={sponsor.logo} 
+                          alt={sponsor.name} 
+                          className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" 
+                        />
+                      </div>
+                    ) : (
+                      <div className="h-12 flex items-center justify-center mb-2">
+                        <span className="font-serif text-sm font-bold tracking-widest text-gray-200 group-hover:text-luxury-gold transition-colors duration-300">
+                          {sponsor.name}
+                        </span>
+                      </div>
+                    )}
+                    <span className="text-[9px] text-gray-400 uppercase tracking-widest font-semibold group-hover:text-luxury-gold transition-colors duration-300">
+                      {sponsor.type}
                     </span>
                   </div>
                 ))}
@@ -125,17 +248,32 @@ export default function Sponsors() {
               <div className="flex items-center gap-2 justify-center mb-6">
                 <Shield className="text-gray-400" size={15} />
                 <h4 className="text-[11px] uppercase tracking-[0.3em] font-extrabold text-gray-400">
-                  Silver Sponsors
+                  Silver Sponsors & Partners
                 </h4>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {sponsors.filter(s => s.tier === 'silver').map((sponsor, index) => (
                   <div 
                     key={index}
-                    className="glass-card rounded-xl p-5 border border-gold-500/5 hover:border-gold-500/20 text-center flex flex-col justify-center items-center h-24 hover:scale-102 transition-all duration-300"
+                    className="group glass-card rounded-xl p-5 border border-gold-500/5 hover:border-gold-500/20 text-center flex flex-col justify-center items-center h-32 hover:scale-105 transition-all duration-300"
                   >
-                    <span className="font-serif text-sm font-bold tracking-widest text-gray-300">
-                      {sponsor.name}
+                    {sponsor.logo ? (
+                      <div className="w-full h-12 bg-white/95 group-hover:bg-white rounded-lg p-1.5 flex items-center justify-center mb-2 transition-all duration-300">
+                        <img 
+                          src={sponsor.logo} 
+                          alt={sponsor.name} 
+                          className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" 
+                        />
+                      </div>
+                    ) : (
+                      <div className="h-12 flex items-center justify-center mb-2">
+                        <span className="font-serif text-sm font-bold tracking-widest text-gray-300 group-hover:text-luxury-gold transition-colors duration-300">
+                          {sponsor.name}
+                        </span>
+                      </div>
+                    )}
+                    <span className="text-[9px] text-gray-400 uppercase tracking-widest font-semibold group-hover:text-luxury-gold transition-colors duration-300">
+                      {sponsor.type}
                     </span>
                   </div>
                 ))}
@@ -152,13 +290,20 @@ export default function Sponsors() {
                 Media & Press Partners
               </h4>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 max-w-md mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {sponsors.filter(s => s.tier === 'media').map((sponsor, index) => (
                 <div 
                   key={index}
-                  className="glass-card rounded-xl p-4 border border-gold-500/5 hover:border-gold-500/20 text-center flex items-center justify-center h-16 hover:scale-102 transition-all duration-300"
+                  className="group glass-card rounded-xl p-4 border border-gold-500/5 hover:border-gold-500/20 text-center flex flex-col justify-center items-center h-32 hover:scale-105 transition-all duration-300"
                 >
-                  <span className="font-serif text-xs font-bold tracking-widest text-gray-400 group-hover:text-white">
+                  <div className="w-full h-12 bg-white/95 group-hover:bg-white rounded-lg p-1.5 flex items-center justify-center mb-2 transition-all duration-300">
+                    <img 
+                      src={sponsor.logo} 
+                      alt={sponsor.name} 
+                      className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" 
+                    />
+                  </div>
+                  <span className="text-[9px] text-gray-400 uppercase tracking-widest font-semibold group-hover:text-luxury-gold transition-colors duration-300">
                     {sponsor.name}
                   </span>
                 </div>
@@ -172,3 +317,4 @@ export default function Sponsors() {
     </section>
   );
 }
+

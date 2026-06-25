@@ -8,38 +8,74 @@ export default function SpeakersJury() {
 
   const speakers = [
     {
-      name: 'Dr. Rakiya Opemi Yusuf',
-      role: 'Director of Payments System Supervision',
-      company: 'Central Bank of Nigeria (CBN)',
-      bio: 'Leading Payments System Vision strategy to support digital financial inclusion and payments infrastructure growth.',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop',
+      name: 'Stanley Grau',
+      role: 'Managing Director',
+      company: 'MSCT BEE Services',
+      bio: 'Expert in B-BBEE verification, enterprise development strategy, and compliance consulting across South Africa.',
+      image: '/assets/Stanley_Grau.jpg',
+      linkedin: '#',
+      twitter: '#'
+    },
+    {
+      name: 'Ornica Mukhavhuli',
+      role: 'CEO',
+      company: 'African Global Skills Academy',
+      bio: 'Pioneering skills development, workspace transformation, and corporate vocational training programs.',
+      image: '/assets/Ornica_Mukhavhuli.jpeg',
+      linkedin: '#',
+      twitter: '#'
+    },
+    {
+      name: 'Mark Jaffe',
+      role: 'CEO & Founder',
+      company: 'Sunstone Logistic Systems',
+      bio: 'Specialist in logistics optimization, supply chain automation, and corporate transportation infrastructure.',
+      image: '/assets/Mark_Jaffe.jpeg',
       linkedin: '#',
       twitter: '#'
     },
     {
       name: 'Josephine Okui Ossiya',
-      role: 'CEO',
+      role: 'Chief Executive Officer',
       company: 'Capital Markets Authority Uganda',
-      bio: 'President of ICPAU with extensive leadership in corporate governance, risk management, and capital markets growth.',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop',
+      bio: 'Directing capital markets growth, corporate finance frameworks, and investor regulations in East Africa.',
+      image: '/assets/Josephine_Okui_Ossiya.jpeg',
       linkedin: '#',
       twitter: '#'
     },
     {
-      name: 'Pyoka Mfuni',
-      role: 'CFO',
-      company: 'Maloto & CGMA',
-      bio: 'Leading financial management expert driving regional organizational stability and corporate advisory.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+      name: 'Dave Van Niekerk',
+      role: 'CEO',
+      company: 'Numeral Group',
+      bio: 'Innovator in banking technology solutions, sub-Saharan finance systems, and mobile transaction networks.',
+      image: '/assets/Dave_Van_Niekerk_3.jpeg',
       linkedin: '#',
       twitter: '#'
     },
     {
-      name: 'Kershini Govender',
-      role: 'Executive Head of Transformation & Strategy',
-      company: 'Nedbank Group',
-      bio: 'Specialist in B-BBEE transformation, corporate growth strategy, and executive coaching in banking.',
-      image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=400&h=400&fit=crop',
+      name: 'Barry Buck',
+      role: 'Chief Technology Officer',
+      company: 'Saucecode',
+      bio: 'Pioneering software engineering frameworks, cloud migration strategy, and secure microservices development.',
+      image: '/assets/Barry_Buck.jpeg',
+      linkedin: '#',
+      twitter: '#'
+    },
+    {
+      name: 'Thoko Tshabalala-Shandu',
+      role: 'Managing Director',
+      company: 'VEA Road Maintenance & Civils',
+      bio: 'Directing large-scale civil engineering, road infrastructure strategy, and municipal transport management.',
+      image: '/assets/Thoko_Tshabalala_Shandu.jpeg',
+      linkedin: '#',
+      twitter: '#'
+    },
+    {
+      name: 'Hywel George',
+      role: 'Director',
+      company: 'Griot',
+      bio: 'Strategic investment director specializing in asset allocation, cross-border partnerships, and sub-Saharan growth.',
+      image: '/assets/Hywel_George.jpeg',
       linkedin: '#',
       twitter: '#'
     }
@@ -47,38 +83,65 @@ export default function SpeakersJury() {
 
   const panelists = [
     {
+      name: 'Lyn Tukei',
+      role: 'Moderator / Communications & PR Manager',
+      company: 'Capital Markets Authority Uganda',
+      bio: 'Directing corporate communications, stakeholder relations, and moderating executive roundtable panels.',
+      image: '/assets/Lyn_Tukei.jpeg',
+      linkedin: '#',
+      twitter: '#'
+    },
+    {
+      name: 'Rakiya Opemi Yusuf',
+      role: 'Director, Payment System Supervision',
+      company: 'Central Bank of Nigeria',
+      bio: 'Overseeing retail payments supervision, central bank digital currencies, and payment systems safety.',
+      image: '/assets/Rakiya_Opemi_Yusuf.jpeg',
+      linkedin: '#',
+      twitter: '#'
+    },
+    {
+      name: 'Pyoka Mfuni',
+      role: 'CFO',
+      company: 'Maloto',
+      bio: 'Leading financial strategies, capital structures, treasury management, and regional corporate investments.',
+      image: '/assets/Pyoka_Mfuni.jpeg',
+      linkedin: '#',
+      twitter: '#'
+    },
+    {
       name: 'Vanessa Haripersad',
-      role: 'Founder & CEO',
+      role: 'CEO & Founder',
       company: 'Shankara People Solutions',
-      bio: 'Pioneering transformational leadership coaching and resilience training across corporate Africa.',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop',
+      bio: 'Pioneering organizational psychology, leadership advisory, and human capital transformation frameworks.',
+      image: '/assets/Vanessa_Haripersad.jpeg',
       linkedin: '#',
       twitter: '#'
     },
     {
-      name: 'Stanley Grau',
-      role: 'Founder & Managing Director',
-      company: 'MSCT BEE Services',
-      bio: 'Deputy Chairperson of the Association of B-BBEE Professionals leading verification frameworks.',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop',
+      name: 'Kershini Govender',
+      role: 'Programme Executive',
+      company: 'Nedbank',
+      bio: 'Directing banking transformation, social development programmes, and corporate empowerment partnerships.',
+      image: '/assets/Kershini_Govender.jpg',
       linkedin: '#',
       twitter: '#'
     },
     {
-      name: 'Ornica Mukhavhuli',
-      role: 'Founder & CEO',
-      company: 'African Global Skills Academy (AGSA)',
-      bio: 'Driving business incubation, regional skills development, and executive talent acceleration.',
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop',
+      name: 'Dave Van Niekerk',
+      role: 'CEO',
+      company: 'Numeral Group',
+      bio: 'Specialist in mobile banking frameworks, microfinance consulting, and regional fintech networks.',
+      image: '/assets/Dave_Van_Niekerk_2.jpeg',
       linkedin: '#',
       twitter: '#'
     },
     {
-      name: 'Ms. Lyn Tukei',
-      role: 'Moderator & Communications Expert',
-      company: 'IEA Summit Panelist',
-      bio: 'Corporate communications specialist and moderator directing executive panel roundtables.',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
+      name: 'Frans Stander',
+      role: 'CEO Payvolution & MEA Head',
+      company: 'Iliad Solution Ltd',
+      bio: 'Directing transaction processing technology, software validation, and payments business growth.',
+      image: '/assets/Frans_Stander.jpg',
       linkedin: '#',
       twitter: '#'
     }
