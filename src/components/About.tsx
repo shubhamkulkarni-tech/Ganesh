@@ -60,20 +60,19 @@ export default function About() {
   return (
     <section id="about" className="relative py-24 bg-luxury-dark overflow-hidden px-6 md:px-12 border-t border-gold-500/10">
       <div className="absolute inset-0 bg-gradient-to-b from-luxury-darker/95 via-luxury-dark/98 to-luxury-darker/95 z-0 pointer-events-none" />
-      {/* Geometric Diamond Grid Background */}
-      <div 
-        className="absolute inset-0 opacity-[0.15] z-0 pointer-events-none"
-        style={{
-          backgroundImage: `
-            linear-gradient(45deg, #c5a059 25%, transparent 25%), 
-            linear-gradient(-45deg, #c5a059 25%, transparent 25%), 
-            linear-gradient(45deg, transparent 75%, #c5a059 75%), 
-            linear-gradient(-45deg, transparent 75%, #c5a059 75%)
-          `,
-          backgroundSize: '40px 40px',
-          backgroundPosition: '0 0, 0 20px, 20px -20px, -20px 0px'
-        }}
-      />
+      {/* Luxurious Topographic Golden Contour Lines Overlay */}
+      <div className="absolute inset-0 opacity-[0.10] z-0 pointer-events-none flex items-center justify-center">
+        <svg viewBox="0 0 1000 500" className="w-full h-full stroke-[#c5a059] stroke-[0.8] fill-none">
+          <path d="M 0 80 Q 250 120, 500 60 T 1000 100" />
+          <path d="M 0 130 Q 200 190, 450 110 T 1000 160" />
+          <path d="M 0 180 Q 300 250, 550 170 T 1000 220" />
+          <path d="M 0 230 Q 250 320, 500 230 T 1000 280" />
+          <path d="M 0 280 Q 350 370, 600 290 T 1000 340" />
+          <path d="M 0 330 Q 200 420, 450 340 T 1000 390" />
+          <path d="M 0 380 Q 300 460, 550 400 T 1000 440" />
+          <path d="M 0 430 Q 250 490, 500 450 T 1000 480" />
+        </svg>
+      </div>
       
       {/* Light glow overlay */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gold-500/5 blur-[120px] pointer-events-none" />
