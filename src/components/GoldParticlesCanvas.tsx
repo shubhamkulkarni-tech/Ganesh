@@ -4,6 +4,11 @@ export default function GoldParticlesCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
+    // Disable on mobile/tablet to prevent performance lag and battery drain
+    if (window.innerWidth < 768) {
+      return;
+    }
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -12,7 +17,7 @@ export default function GoldParticlesCanvas() {
 
     let animationFrameId: number;
     let particles: Particle[] = [];
-    const mouse = { x: null as number | null, y: null as number | null, radius: 180 };
+    const mouse = { x: null as number | null, y: null as number | null, radius: 150 };
 
     class Particle {
       x: number;
@@ -26,9 +31,9 @@ export default function GoldParticlesCanvas() {
       constructor() {
         this.x = Math.random() * (canvas?.width || 800);
         this.y = Math.random() * (canvas?.height || 600);
-        this.vx = (Math.random() - 0.5) * 0.4;
-        this.vy = (Math.random() - 0.5) * 0.4;
-        this.radius = Math.random() * 2 + 0.5;
+        this.vx = (Math.random() - 0.5) * 0.3;
+        this.vy = (Math.random() - 0.5) * 0.3;
+        this.radius = Math.random() * 1.5 + 0.5;
         this.alpha = Math.random() * 0.5 + 0.2;
         // Curated gold shades
         const golds = ['#D4AF37', '#F3E5AB', '#C5A059', '#AA7C11'];
@@ -54,29 +59,26 @@ export default function GoldParticlesCanvas() {
           if (dist < mouse.radius) {
             const force = (mouse.radius - dist) / mouse.radius;
             // Subtle attraction to mouse
-            this.x += (dx / dist) * force * 0.6;
-            this.y += (dy / dist) * force * 0.6;
+            this.x += (dx / dist) * force * 0.5;
+            this.y += (dy / dist) * force * 0.5;
           }
         }
       }
 
       draw() {
         if (!ctx) return;
-        ctx.save();
-        ctx.globalAlpha = this.alpha;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fillStyle = this.color;
-        ctx.shadowBlur = 8;
-        ctx.shadowColor = '#c5a059';
+        // Removed heavy shadowBlur calculations for high frame-rate rendering
         ctx.fill();
-        ctx.restore();
       }
     }
 
     const init = () => {
       particles = [];
-      const particleCount = Math.min(Math.floor((window.innerWidth * window.innerHeight) / 15000), 120);
+      // Reduced density limit for optimized execution loop
+      const particleCount = Math.min(Math.floor((window.innerWidth * window.innerHeight) / 32000), 50);
       for (let i = 0; i < particleCount; i++) {
         particles.push(new Particle());
       }
@@ -109,6 +111,8 @@ export default function GoldParticlesCanvas() {
       if (!ctx || !canvas) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+      ctx.lineWidth = 0.5;
+      
       // Draw connections
       for (let i = 0; i < particles.length; i++) {
         particles[i].update();
@@ -119,16 +123,13 @@ export default function GoldParticlesCanvas() {
           const dy = particles[i].y - particles[j].y;
           const dist = Math.hypot(dx, dy);
 
-          if (dist < 100) {
-            ctx.save();
+          if (dist < 90) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            // Dynamic connection color based on proximity
-            ctx.strokeStyle = 'rgba(197, 160, 89, ' + (1 - dist / 100) * 0.15 + ')';
-            ctx.lineWidth = 0.5;
+            // Dynamic connection color based on proximity (decreased opacity for clean look)
+            ctx.strokeStyle = `rgba(197, 160, 89, ${(1 - dist / 90) * 0.12})`;
             ctx.stroke();
-            ctx.restore();
           }
         }
       }
@@ -149,7 +150,7 @@ export default function GoldParticlesCanvas() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full pointer-events-none z-10"
+      className="absolute inset-0 w-full h-full pointer-events-none z-10 hidden md:block"
       style={{ mixBlendMode: 'screen' }}
     />
   );
