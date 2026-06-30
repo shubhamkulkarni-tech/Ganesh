@@ -59,10 +59,20 @@ export default function About() {
 
   return (
     <section id="about" className="relative py-24 bg-luxury-dark overflow-hidden px-6 md:px-12 border-t border-gold-500/10">
-      <div className="absolute inset-0 bg-gradient-to-b from-luxury-darker/90 via-luxury-dark/95 to-luxury-darker/90 z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-luxury-darker/95 via-luxury-dark/98 to-luxury-darker/95 z-0 pointer-events-none" />
+      {/* Geometric Diamond Grid Background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center z-0 opacity-25 pointer-events-none"
-        style={{ backgroundImage: "url('/networking_lounge.jpg')" }}
+        className="absolute inset-0 opacity-[0.15] z-0 pointer-events-none"
+        style={{
+          backgroundImage: `
+            linear-gradient(45deg, #c5a059 25%, transparent 25%), 
+            linear-gradient(-45deg, #c5a059 25%, transparent 25%), 
+            linear-gradient(45deg, transparent 75%, #c5a059 75%), 
+            linear-gradient(-45deg, transparent 75%, #c5a059 75%)
+          `,
+          backgroundSize: '40px 40px',
+          backgroundPosition: '0 0, 0 20px, 20px -20px, -20px 0px'
+        }}
       />
       
       {/* Light glow overlay */}

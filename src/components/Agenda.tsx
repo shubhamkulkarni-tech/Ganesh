@@ -42,10 +42,14 @@ export default function Agenda() {
 
   return (
     <section id="agenda" className="relative py-24 bg-luxury-darker overflow-hidden px-6 md:px-12 border-t border-gold-500/10">
-      <div className="absolute inset-0 bg-gradient-to-b from-luxury-dark/90 via-luxury-darker/95 to-luxury-dark/90 z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-luxury-darker/95 via-luxury-dark/98 to-luxury-darker/95 z-0 pointer-events-none" />
+      {/* Dynamic Dotted Grid Background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center z-0 opacity-25 pointer-events-none"
-        style={{ backgroundImage: "url('/summit_hall.jpg')" }}
+        className="absolute inset-0 opacity-[0.15] z-0 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(#c5a059 1px, transparent 0)',
+          backgroundSize: '32px 32px'
+        }}
       />
 
       <div className="relative max-w-5xl mx-auto z-10">

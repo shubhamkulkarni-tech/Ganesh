@@ -60,11 +60,15 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative py-24 bg-luxury-darker overflow-hidden px-6 md:px-12 border-t border-gold-500/10">
+      <div className="absolute inset-0 bg-gradient-to-b from-luxury-darker/95 via-luxury-dark/98 to-luxury-darker/95 z-0 pointer-events-none" />
+      {/* Dotted Grid Background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center z-0 opacity-8 pointer-events-none"
-        style={{ backgroundImage: "url('/networking_lounge.jpg')" }}
+        className="absolute inset-0 opacity-[0.15] z-0 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(#c5a059 1px, transparent 0)',
+          backgroundSize: '24px 24px'
+        }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-luxury-dark/90 via-luxury-darker/95 to-luxury-dark/90 z-0 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto z-10">
         

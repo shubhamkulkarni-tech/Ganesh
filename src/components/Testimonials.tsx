@@ -40,11 +40,15 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="relative py-24 bg-luxury-dark overflow-hidden px-6 md:px-12 border-t border-gold-500/10">
-      <div className="absolute inset-0 bg-gradient-to-b from-luxury-darker/90 via-luxury-dark/95 to-luxury-darker/90 z-0 pointer-events-none" />
-      <div 
-        className="absolute inset-0 bg-cover bg-center z-0 opacity-25 pointer-events-none"
-        style={{ backgroundImage: "url('/summit_hall.jpg')" }}
-      />
+      <div className="absolute inset-0 bg-gradient-to-b from-luxury-darker/95 via-luxury-dark/98 to-luxury-darker/95 z-0 pointer-events-none" />
+      {/* Luxury Sine Wave Vector Lines Background */}
+      <div className="absolute inset-0 opacity-[0.10] z-0 pointer-events-none flex items-center justify-center">
+        <svg viewBox="0 0 1000 300" className="w-full h-[300px] stroke-[#c5a059] stroke-[0.8] fill-none">
+          <path d="M 0 150 Q 250 50, 500 150 T 1000 150" />
+          <path d="M 0 170 Q 250 70, 500 170 T 1000 170" />
+          <path d="M 0 130 Q 250 30, 500 130 T 1000 130" />
+        </svg>
+      </div>
       
       {/* Glow highlight */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-gold-500/5 blur-[120px] pointer-events-none" />

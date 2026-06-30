@@ -68,11 +68,26 @@ export default function Categories({ onOpenModal }: CategoriesProps) {
 
   return (
     <section id="categories" className="relative py-24 bg-luxury-darker overflow-hidden px-6 md:px-12 border-t border-gold-500/10">
-      <div className="absolute inset-0 bg-gradient-to-b from-luxury-dark/90 via-luxury-darker/95 to-luxury-dark/90 z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-luxury-darker/95 via-luxury-dark/98 to-luxury-darker/95 z-0 pointer-events-none" />
+      {/* Dotted Grid Background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center z-0 opacity-25 pointer-events-none"
-        style={{ backgroundImage: "url('/awards_stage.jpg')" }}
+        className="absolute inset-0 opacity-[0.15] z-0 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(#c5a059 1px, transparent 0)',
+          backgroundSize: '24px 24px'
+        }}
       />
+      {/* Concentric Gold Vector Rings */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.12] pointer-events-none z-0">
+        <svg viewBox="0 0 100 100" className="w-full h-full stroke-[#c5a059] stroke-[0.25] fill-none">
+          <circle cx="50" cy="50" r="10" />
+          <circle cx="50" cy="50" r="20" strokeDasharray="1 1" />
+          <circle cx="50" cy="50" r="30" />
+          <circle cx="50" cy="50" r="40" strokeDasharray="2 1" />
+          <line x1="10" y1="50" x2="90" y2="50" />
+          <line x1="50" y1="10" x2="50" y2="90" />
+        </svg>
+      </div>
 
       <div className="relative max-w-7xl mx-auto z-10">
         

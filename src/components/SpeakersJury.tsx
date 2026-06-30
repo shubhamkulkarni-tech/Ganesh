@@ -151,11 +151,22 @@ export default function SpeakersJury() {
 
   return (
     <section id="speakers" className="relative py-24 bg-luxury-dark overflow-hidden px-6 md:px-12 border-t border-gold-500/10">
-      <div className="absolute inset-0 bg-gradient-to-b from-luxury-darker/90 via-luxury-dark/95 to-luxury-darker/90 z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-luxury-darker/95 via-luxury-dark/98 to-luxury-darker/95 z-0 pointer-events-none" />
+      {/* Fine Coordinate Grid & Vertical Guidelines Background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center z-0 opacity-25 pointer-events-none"
-        style={{ backgroundImage: "url('/summit_hall.jpg')" }}
+        className="absolute inset-0 opacity-[0.12] z-0 pointer-events-none"
+        style={{
+          backgroundImage: 'linear-gradient(to right, #c5a059 1px, transparent 1px), linear-gradient(to bottom, #c5a059 1px, transparent 1px)',
+          backgroundSize: '80px 80px'
+        }}
       />
+      <div className="absolute inset-0 flex justify-around opacity-[0.08] z-0 pointer-events-none">
+        <div className="w-[1px] h-full bg-luxury-gold" />
+        <div className="w-[1px] h-full bg-luxury-gold" />
+        <div className="w-[1px] h-full bg-luxury-gold" />
+        <div className="w-[1px] h-full bg-luxury-gold" />
+        <div className="w-[1px] h-full bg-luxury-gold" />
+      </div>
       
       {/* Background spotlights */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-gold-500/5 blur-[120px] pointer-events-none" />

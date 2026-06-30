@@ -64,11 +64,17 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="relative py-24 bg-luxury-darker overflow-hidden px-6 md:px-12 border-t border-gold-500/10">
-      <div className="absolute inset-0 bg-gradient-to-b from-luxury-dark/90 via-luxury-darker/95 to-luxury-dark/90 z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-luxury-darker/95 via-luxury-dark/98 to-luxury-darker/95 z-0 pointer-events-none" />
+      {/* Geometric Camera Viewfinder outlines */}
       <div 
-        className="absolute inset-0 bg-cover bg-center z-0 opacity-25 pointer-events-none"
-        style={{ backgroundImage: "url('/gold_trophy.jpg')" }}
+        className="absolute inset-0 opacity-[0.10] z-0 pointer-events-none"
+        style={{
+          backgroundImage: 'linear-gradient(135deg, #c5a059 10%, transparent 10%, transparent 50%, #c5a059 50%, #c5a059 60%, transparent 60%, transparent 100%)',
+          backgroundSize: '40px 40px'
+        }}
       />
+      <div className="absolute top-10 left-10 w-20 h-20 opacity-[0.25] pointer-events-none z-0 border-l border-t border-luxury-gold" />
+      <div className="absolute bottom-10 right-10 w-20 h-20 opacity-[0.25] pointer-events-none z-0 border-r border-b border-luxury-gold" />
 
       <div className="relative max-w-7xl mx-auto z-10">
         
