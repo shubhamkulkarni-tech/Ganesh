@@ -41,7 +41,7 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="relative py-24 bg-luxury-dark overflow-hidden px-6 md:px-12 border-t border-gold-500/10">
       <div 
-        className="absolute inset-0 bg-cover bg-center z-0 opacity-10 pointer-events-none"
+        className="absolute inset-0 bg-cover bg-center z-0 opacity-20 pointer-events-none"
         style={{ backgroundImage: "url('/summit_hall.jpg')" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-luxury-darker/90 via-luxury-dark/95 to-luxury-darker/90 z-0 pointer-events-none" />
