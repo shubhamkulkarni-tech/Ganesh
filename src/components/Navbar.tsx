@@ -69,10 +69,10 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
           </div>
           <div>
             <span className="font-serif text-lg font-bold tracking-widest text-white block leading-none">
-              GELA
+              GILS
             </span>
-            <span className="text-[9px] font-sans uppercase tracking-[0.25em] text-luxury-gold block mt-0.5 font-semibold">
-              EXCELLENCE AWARDS
+            <span className="text-[8px] font-sans uppercase tracking-[0.22em] text-luxury-gold block mt-0.5 font-bold">
+              GLOBAL IMPACT LEADERS
             </span>
           </div>
         </div>

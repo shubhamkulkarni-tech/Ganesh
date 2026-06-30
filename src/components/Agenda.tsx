@@ -27,7 +27,7 @@ export default function Agenda() {
     {
       time: '01:30 PM – 02:30 PM',
       title: 'Awards Felicitation by Celebrity Chief Guest',
-      description: 'The main awards felicitation ceremony presenting GELA 2.0 excellence trophies to corporate leaders and organisations.',
+      description: 'The main awards felicitation ceremony presenting GILS 2026 excellence trophies to corporate leaders and organisations.',
       location: 'Grand Ballroom',
       icon: Award
     },

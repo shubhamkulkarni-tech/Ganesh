@@ -11,7 +11,7 @@ export default function Testimonials() {
       role: 'CEO',
       company: 'Vanguard Holdings',
       award: 'Women Leadership Award 2026',
-      quote: 'Winning this distinction at GELA elevated our executive credibility on a global scale. Within three months of the ceremony, we closed our Series C funding round at $45M.',
+      quote: 'Winning this distinction at GILS elevated our executive credibility on a global scale. Within three months of the ceremony, we closed our Series C funding round at $45M.',
       story: 'Evelyn\'s leadership has scaled Vanguard to operate in 14 countries. Her key focus on diverse boardrooms and ESG investments secured her the committee\'s unanimous vote.',
       duration: '2:15',
       image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop'
@@ -21,7 +21,7 @@ export default function Testimonials() {
       role: 'Chief AI Scientist',
       company: 'Synthetix Global',
       award: 'AI Innovation Excellence 2026',
-      quote: 'Being recognized on the grand stage in Singapore was a defining moment for our research group. GELA is truly the Oscars of corporate leadership and tech pioneering.',
+      quote: 'Being recognized on the grand stage in Cape Town was a defining moment for our research group. GILS is truly the Oscars of corporate leadership and tech pioneering.',
       story: 'Marcus led the deployment of deep learning models that saved Synthetix over $12M in server optimization, defining a new blueprint for sustainable computing.',
       duration: '1:48',
       image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=400&fit=crop'
@@ -61,7 +61,7 @@ export default function Testimonials() {
           </h2>
           <div className="w-16 h-[1px] bg-luxury-gold mx-auto mb-6" />
           <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-            Discover how GELA accolades and networking connections have empowered executive brands, unlocked seed/venture capital, and facilitated global partnerships.
+            Discover how GILS accolades and networking connections have empowered executive brands, unlocked seed/venture capital, and facilitated global partnerships.
           </p>
         </div>
 
@@ -189,7 +189,7 @@ export default function Testimonials() {
                     Playing Testimonial: {testimonials[playingVideoIdx].name}
                   </h4>
                   <p className="text-gray-400 text-xs max-w-md mb-6 leading-relaxed">
-                    Streaming raw footage from GELA 2.0 summit archives. High-definition playback and panel sessions streaming are available on the delegate portal.
+                    Streaming raw footage from GILS 2026 summit archives. High-definition playback and panel sessions streaming are available on the delegate portal.
                   </p>
                   <div className="w-full max-w-sm h-1 bg-white/10 rounded-full overflow-hidden relative">
                     <motion.div 

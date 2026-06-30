@@ -86,7 +86,7 @@ export default function Categories({ onOpenModal }: CategoriesProps) {
           </h2>
           <div className="w-16 h-[1px] bg-luxury-gold mx-auto mb-6" />
           <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-            Nominate yourself or an industry peer for the prestigious GELA 2027 awards. Our jury evaluates entries based on rigorous criteria, global relevance, and industry disruption.
+            Nominate yourself or an industry peer for the prestigious GILS 2026 awards. Our jury evaluates entries based on rigorous criteria, global relevance, and industry disruption.
           </p>
         </div>
 

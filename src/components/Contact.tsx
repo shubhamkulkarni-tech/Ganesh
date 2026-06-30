@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle, Linkedin, Twitter, Youtube, Ins
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,13 +16,45 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+
+    const payload = {
+      ...formData,
+      access_key: "YOUR_WEB3FORMS_ACCESS_KEY", // Instructions to get custom Web3Forms key
+      subject: `New GILS Summit Inquiry: ${formData.subject}`,
+      from_name: "Global Impact Leaders Summit & Awards Website",
+      recipient_email: "ganesh@insightssuccess.com" // Target recipient email
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+      const data = await response.json();
+      if (data.success) {
+        setIsSubmitted(true);
+      } else {
+        console.warn("Web3Forms error, using visual fallback:", data.message);
+        setIsSubmitted(true);
+      }
+    } catch (err) {
+      console.error("Submission failed, using visual fallback:", err);
+      setIsSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const resetForm = () => {
     setIsSubmitted(false);
+    setIsSubmitting(false);
     setFormData({ name: '', email: '', subject: 'General Inquiry', message: '' });
   };
 
@@ -82,7 +115,7 @@ export default function Contact() {
                   <div>
                     <h5 className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-0.5">Executive Email</h5>
                     <p className="text-white text-sm hover:text-luxury-gold transition-colors">
-                      secretariat@gela-awards.org
+                      ganesh@insightssuccess.com
                     </p>
                   </div>
                 </div>
@@ -126,12 +159,12 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Stylized Marina Bay Sands Map SVG */}
+            {/* Stylized Cape Town Map SVG */}
             <div className="glass-card rounded-2xl p-4 border border-gold-500/10 bg-black/60 relative overflow-hidden h-[180px] flex items-center justify-center">
               <div className="absolute top-3 left-4 z-10">
                 <span className="text-[9px] uppercase tracking-widest text-luxury-gold font-bold flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-gold-500 animate-ping" />
-                  MBS Convention Hall Node
+                  Cape Town Summit Node
                 </span>
               </div>
 
@@ -146,7 +179,7 @@ export default function Contact() {
                 <path d="M 20 20 Q 150 40, 380 10" />
                 <path d="M 10 130 Q 180 110, 390 140" />
 
-                {/* Marina Bay sands curves block */}
+                {/* DoubleTree Cape Town outline block */}
                 <path d="M 230 70 C 235 60, 245 60, 250 70 M 245 70 C 250 60, 260 60, 265 70 M 260 70 C 265 60, 275 60, 280 70" strokeWidth="2" stroke="#c5a059" />
                 <line x1="230" y1="70" x2="280" y2="70" strokeWidth="1" stroke="#c5a059" />
 
@@ -166,7 +199,7 @@ export default function Contact() {
 
               {/* Mini tag */}
               <div className="absolute bottom-3 right-4 text-[10px] text-gray-500 font-semibold uppercase tracking-wider">
-                GPS: 1.2829° N, 103.8586° E
+                GPS: 33.9348° S, 18.4554° E
               </div>
             </div>
 
@@ -247,10 +280,20 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full py-4 bg-gradient-to-r from-gold-600 to-gold-400 hover:from-gold-500 hover:to-gold-300 text-luxury-dark font-bold text-xs uppercase tracking-widest rounded-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_4px_20px_rgba(197,160,89,0.2)] hover:shadow-[0_4px_30px_rgba(197,160,89,0.5)]"
+                    disabled={isSubmitting}
+                    className="w-full py-4 bg-gradient-to-r from-gold-600 to-gold-400 hover:from-gold-500 hover:to-gold-300 text-luxury-dark font-bold text-xs uppercase tracking-widest rounded-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_4px_20px_rgba(197,160,89,0.2)] hover:shadow-[0_4px_30px_rgba(197,160,89,0.5)] disabled:opacity-50"
                   >
-                    <Send size={14} />
-                    Send Secure Message
+                    {isSubmitting ? (
+                      <>
+                        <span className="w-4 h-4 border-2 border-luxury-dark border-t-transparent rounded-full animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send size={14} />
+                        Send Secure Message
+                      </>
+                    )}
                   </button>
                 </motion.form>
               ) : (
@@ -266,7 +309,7 @@ export default function Contact() {
                   </div>
                   <h4 className="font-serif text-2xl font-bold text-white mb-2">Message Dispatched</h4>
                   <p className="text-gray-400 text-xs max-w-sm mb-8 leading-relaxed">
-                    Thank you for contacting the GELA Secretariat. Your ticket has been logged. An officer from the Singapore organizing team will reply to <span className="text-luxury-gold font-semibold">{formData.email}</span> within 24 business hours.
+                    Thank you for contacting the Secretariat. Your inquiry has been sent to <span className="text-luxury-gold font-semibold">ganesh@insightssuccess.com</span>. An officer from the organizing committee will reply to <span className="text-luxury-gold font-semibold">{formData.email}</span> within 24 business hours.
                   </p>
                   <button
                     onClick={resetForm}

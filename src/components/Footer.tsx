@@ -44,19 +44,19 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-serif text-base font-bold tracking-widest text-white block leading-none">
-                  GELA 2.0
+                  GILS 2026
                 </span>
                 <span className="text-[7.5px] font-sans uppercase tracking-[0.2em] text-luxury-gold block mt-0.5 font-bold">
-                  EXCELLENCE AWARDS
+                  GLOBAL IMPACT LEADERS
                 </span>
               </div>
             </div>
             <p className="text-gray-500 text-[11px] leading-relaxed max-w-sm">
-              The Global Excellence & Leadership Awards is the premier global platform celebrating benchmark accomplishments in business strategy, technological innovation, sustainability, and C-suite distinction.
+              The Global Impact Leaders Summit & Awards is the premier global platform celebrating benchmark accomplishments in business strategy, technological innovation, sustainability, and C-suite distinction.
             </p>
             <div className="flex items-center gap-2 text-[10px] text-gray-500 font-semibold uppercase tracking-wider bg-white/5 border border-gold-500/10 rounded-lg py-2 px-3 w-fit">
               <ShieldCheck className="text-luxury-gold" size={12} />
-              Official SEC Registry: GELA-2026
+              Official SEC Registry: GILS-2026
             </div>
           </div>
 
@@ -138,7 +138,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-gold-500/10 pt-8 mt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-600 text-[10px] uppercase tracking-wider font-semibold">
           <div>
-            © 2026 Global Excellence & Leadership Summit. All Rights Reserved.
+            © 2026 Global Impact Leaders Summit & Awards. All Rights Reserved.
           </div>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-luxury-gold transition-colors">Privacy Charter</a>

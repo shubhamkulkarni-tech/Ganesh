@@ -173,7 +173,7 @@ export default function SpeakersJury() {
           </h2>
           <div className="w-16 h-[1px] bg-luxury-gold mx-auto mb-6" />
           <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-            Meet the global thought leaders delivering keynotes, directing panel discussions, and moderating the GELA 2.0 Cape Town summit.
+            Meet the global thought leaders delivering keynotes, directing panel discussions, and moderating the GILS 2026 Cape Town summit.
           </p>
 
           {/* Toggle Switch Tabs */}

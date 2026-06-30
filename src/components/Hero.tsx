@@ -17,7 +17,7 @@ export default function Hero({ onOpenModal }: HeroProps) {
 
   // Target date: October 28, 2027
   useEffect(() => {
-    const targetDate = new Date('2026-08-09T10:30:00').getTime();
+    const targetDate = new Date('2026-08-29T10:30:00').getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -93,9 +93,9 @@ export default function Hero({ onOpenModal }: HeroProps) {
           transition={{ duration: 1, delay: 0.2 }}
           className="font-serif text-4xl sm:text-5xl md:text-7xl font-bold tracking-wide leading-tight text-white mb-6"
         >
-          Global Excellence & <br />
-          <span className="gold-text-gradient italic">Leadership Awards 2.0</span>
-          <span className="text-xl md:text-2xl font-serif text-white align-super ml-2 font-normal">2026</span>
+          Global Impact Leaders <br />
+          <span className="gold-text-gradient italic">Summit & Awards 2026</span>
+          <span className="text-xl md:text-2xl font-serif text-white align-super ml-2 font-normal">Africa</span>
         </motion.h1>
 
         {/* Premium Subtitle */}
@@ -117,7 +117,7 @@ export default function Hero({ onOpenModal }: HeroProps) {
         >
           <div className="flex items-center gap-3">
             <Calendar className="text-luxury-gold" size={18} />
-            <span>August 9, 2026</span>
+            <span>29th August 2026</span>
           </div>
           <div className="flex items-center gap-3">
             <MapPin className="text-luxury-gold" size={18} />

@@ -9,12 +9,12 @@ export default function Gallery() {
     {
       url: 'awards_stage.png',
       title: 'Grand Awards Stage',
-      desc: 'The official GELA main stage setup with cinematic gold lighting effects.'
+      desc: 'The official GILS main stage setup with cinematic gold lighting effects.'
     },
     {
       url: 'gold_trophy.png',
-      title: 'GELA Excellence Trophy',
-      desc: 'The solid gold-plated GELA trophy designed by luxury artisans.'
+      title: 'GILS Excellence Trophy',
+      desc: 'The solid gold-plated GILS trophy designed by luxury artisans.'
     },
     {
       url: 'https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=600&h=800&fit=crop',
@@ -29,12 +29,12 @@ export default function Gallery() {
     {
       url: 'gala_dinner.png',
       title: 'Gala Dinner Banquet',
-      desc: 'VIP dining setup inside the Sands Imperial Hall with custom table florals.'
+      desc: 'VIP dining setup inside the DoubleTree Ballroom with custom table florals.'
     },
     {
       url: 'award_winner.png',
       title: 'Award Laureates Group',
-      desc: 'Winners of the GELA 2.0 summit celebrating their category trophies.'
+      desc: 'Winners of the GILS 2026 summit celebrating their category trophies.'
     },
     {
       url: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&h=600&fit=crop',
@@ -78,7 +78,7 @@ export default function Gallery() {
             Summit Visuals
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-bold text-white tracking-wide mb-6">
-            GELA Event <span className="gold-text-gradient">Gallery Highlights</span>
+            GILS Event <span className="gold-text-gradient">Gallery Highlights</span>
           </h2>
           <div className="w-16 h-[1px] bg-luxury-gold mx-auto mb-6" />
           <p className="text-gray-400 text-sm md:text-base leading-relaxed">
@@ -111,7 +111,7 @@ export default function Gallery() {
               <div className="absolute inset-0 flex flex-col justify-end p-6 z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-3 group-hover:translate-y-0">
                 <span className="inline-flex items-center gap-1.5 text-[9px] font-sans uppercase tracking-widest text-luxury-gold font-bold mb-1">
                   <Camera size={10} />
-                  GELA Event Photo
+                  GILS Event Photo
                 </span>
                 <h4 className="font-serif text-base font-bold text-white tracking-wide">
                   {img.title}

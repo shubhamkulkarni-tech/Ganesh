@@ -81,7 +81,7 @@ export default function About() {
           </h2>
           <div className="w-16 h-[1px] bg-luxury-gold mx-auto mb-6" />
           <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-            A new generation of global pioneers is rewriting the narrative of excellence, innovation, and strategic leadership across international borders. Global Excellence & Leadership Awards 2.0 is a premium initiative that honors exceptional leadership, innovative disruption, and transformative impact on the global stage, bringing together the bold, the driven, and the changemakers across sectors.
+            A new generation of global pioneers is rewriting the narrative of excellence, innovation, and strategic leadership across international borders. Global Impact Leaders Summit & Awards 2026 – Africa is a premium initiative that honors exceptional leadership, innovative disruption, and transformative impact on the global stage, bringing together the bold, the driven, and the changemakers across sectors.
           </p>
         </div>
 

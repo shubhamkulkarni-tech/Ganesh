@@ -1,8 +1,8 @@
-import { Shield, Sparkles, Gem, Radio } from 'lucide-react';
+import { Shield, Radio } from 'lucide-react';
 
 interface Sponsor {
   name: string;
-  tier: 'platinum' | 'gold' | 'silver' | 'media';
+  tier: 'co-sponsor' | 'media';
   type: string;
   logo?: string;
 }
@@ -11,79 +11,79 @@ export default function Sponsors() {
   const sponsors: Sponsor[] = [
     {
       name: 'MSCT BEE Services',
-      tier: 'platinum',
+      tier: 'co-sponsor',
       type: 'BEE Verification Partner',
       logo: '/assets/msct.jpeg'
     },
     {
       name: 'African Global Skills Academy',
-      tier: 'platinum',
+      tier: 'co-sponsor',
       type: 'Skills Development Partner',
       logo: '/assets/african.jpg'
     },
     {
       name: 'Capital Markets Authority',
-      tier: 'platinum',
+      tier: 'co-sponsor',
       type: 'Regulatory Partner',
       logo: '/assets/cma.jpg'
     },
     {
       name: 'Nedbank',
-      tier: 'gold',
+      tier: 'co-sponsor',
       type: 'Banking Partner',
       logo: '/assets/nedbank.jpg'
     },
     {
       name: 'Numeral Group',
-      tier: 'gold',
+      tier: 'co-sponsor',
       type: 'Fintech Partner',
       logo: ''
     },
     {
       name: 'Saucecode',
-      tier: 'gold',
+      tier: 'co-sponsor',
       type: 'Technology Partner',
       logo: ''
     },
     {
       name: 'Sunstone Logistic Systems',
-      tier: 'gold',
+      tier: 'co-sponsor',
       type: 'Logistics Partner',
       logo: ''
     },
     {
       name: 'VEA Road Maintenance & Civils',
-      tier: 'silver',
+      tier: 'co-sponsor',
       type: 'Infrastructure Partner',
       logo: ''
     },
     {
       name: 'Griot',
-      tier: 'silver',
+      tier: 'co-sponsor',
       type: 'Investment Partner',
       logo: ''
     },
     {
       name: 'Central Bank of Nigeria',
-      tier: 'silver',
+      tier: 'co-sponsor',
       type: 'Central Banking Partner',
       logo: ''
     },
     {
       name: 'Maloto',
-      tier: 'silver',
+      tier: 'co-sponsor',
       type: 'Financial Services Partner',
       logo: ''
     },
     {
       name: 'Shankara People Solutions',
-      tier: 'silver',
+      tier: 'co-sponsor',
       type: 'Human Capital Partner',
       logo: ''
     },
     {
       name: 'Iliad Solution Ltd',
-      tier: 'silver',
+      tier: 'co-sponsor',
       type: 'Payment Validation Partner',
       logo: ''
     },
@@ -136,7 +136,7 @@ export default function Sponsors() {
           </h2>
           <div className="w-16 h-[1px] bg-luxury-gold mx-auto mb-6" />
           <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-            Supported by global conglomerates, financial institutions, venture funds, and media conglomerates dedicated to driving international leadership and innovation.
+            Supported by global conglomerates, financial institutions, and media conglomerates dedicated to driving leadership, development, and international innovation.
           </p>
         </div>
 
@@ -154,7 +154,7 @@ export default function Sponsors() {
                 className="flex items-center gap-2 border border-gold-500/10 bg-[#121212]/30 px-6 py-3 rounded-lg hover:border-luxury-gold transition-colors duration-300 pointer-events-none"
               >
                 <div className="text-[11px] font-sans tracking-widest text-gold-500/85 uppercase font-bold mr-2">
-                  {item.tier}
+                  {item.tier === 'media' ? 'Media Partner' : 'Co-Sponsor'}
                 </div>
                 <div className="font-serif text-sm font-semibold text-white tracking-widest">
                   {item.name}
@@ -165,17 +165,17 @@ export default function Sponsors() {
         </div>
 
         {/* Tiered Sponsor Grid */}
-        <div className="space-y-16">
-          {/* Platinum */}
+        <div className="space-y-20">
+          {/* Co-Sponsors */}
           <div>
-            <div className="flex items-center gap-2 justify-center mb-8">
-              <Gem className="text-white animate-pulse" size={16} />
+            <div className="flex items-center gap-2 justify-center mb-10">
+              <Shield className="text-white animate-pulse" size={16} />
               <h4 className="text-[11px] uppercase tracking-[0.3em] font-extrabold text-white">
-                Platinum Partners
+                Official Co-Sponsors
               </h4>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {sponsors.filter(s => s.tier === 'platinum').map((sponsor, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              {sponsors.filter(s => s.tier === 'co-sponsor').map((sponsor, index) => (
                 <div 
                   key={index}
                   className="group glass-card rounded-xl p-6 border border-white/10 hover:border-white/30 text-center flex flex-col justify-center items-center h-40 hover:scale-105 transition-all duration-300"
@@ -190,7 +190,7 @@ export default function Sponsors() {
                     </div>
                   ) : (
                     <div className="h-16 flex items-center justify-center mb-3">
-                      <span className="font-serif text-lg font-extrabold tracking-widest text-white group-hover:text-luxury-gold transition-colors duration-300">
+                      <span className="font-serif text-sm font-extrabold tracking-widest text-white group-hover:text-luxury-gold transition-colors duration-300">
                         {sponsor.name}
                       </span>
                     </div>
@@ -203,88 +203,9 @@ export default function Sponsors() {
             </div>
           </div>
 
-          {/* Gold & Silver Group */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto pt-6">
-            
-            {/* Gold */}
-            <div>
-              <div className="flex items-center gap-2 justify-center mb-6">
-                <Sparkles className="text-luxury-gold animate-pulse" size={15} />
-                <h4 className="text-[11px] uppercase tracking-[0.3em] font-extrabold text-luxury-gold">
-                  Gold Sponsors
-                </h4>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {sponsors.filter(s => s.tier === 'gold').map((sponsor, index) => (
-                  <div 
-                    key={index}
-                    className="group glass-card rounded-xl p-5 border border-gold-500/10 hover:border-luxury-gold/40 text-center flex flex-col justify-center items-center h-32 hover:scale-105 transition-all duration-300"
-                  >
-                    {sponsor.logo ? (
-                      <div className="w-full h-12 bg-white/95 group-hover:bg-white rounded-lg p-1.5 flex items-center justify-center mb-2 transition-all duration-300">
-                        <img 
-                          src={sponsor.logo} 
-                          alt={sponsor.name} 
-                          className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" 
-                        />
-                      </div>
-                    ) : (
-                      <div className="h-12 flex items-center justify-center mb-2">
-                        <span className="font-serif text-sm font-bold tracking-widest text-gray-200 group-hover:text-luxury-gold transition-colors duration-300">
-                          {sponsor.name}
-                        </span>
-                      </div>
-                    )}
-                    <span className="text-[9px] text-gray-400 uppercase tracking-widest font-semibold group-hover:text-luxury-gold transition-colors duration-300">
-                      {sponsor.type}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Silver */}
-            <div>
-              <div className="flex items-center gap-2 justify-center mb-6">
-                <Shield className="text-gray-400" size={15} />
-                <h4 className="text-[11px] uppercase tracking-[0.3em] font-extrabold text-gray-400">
-                  Silver Sponsors & Partners
-                </h4>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {sponsors.filter(s => s.tier === 'silver').map((sponsor, index) => (
-                  <div 
-                    key={index}
-                    className="group glass-card rounded-xl p-5 border border-gold-500/5 hover:border-gold-500/20 text-center flex flex-col justify-center items-center h-32 hover:scale-105 transition-all duration-300"
-                  >
-                    {sponsor.logo ? (
-                      <div className="w-full h-12 bg-white/95 group-hover:bg-white rounded-lg p-1.5 flex items-center justify-center mb-2 transition-all duration-300">
-                        <img 
-                          src={sponsor.logo} 
-                          alt={sponsor.name} 
-                          className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" 
-                        />
-                      </div>
-                    ) : (
-                      <div className="h-12 flex items-center justify-center mb-2">
-                        <span className="font-serif text-sm font-bold tracking-widest text-gray-300 group-hover:text-luxury-gold transition-colors duration-300">
-                          {sponsor.name}
-                        </span>
-                      </div>
-                    )}
-                    <span className="text-[9px] text-gray-400 uppercase tracking-widest font-semibold group-hover:text-luxury-gold transition-colors duration-300">
-                      {sponsor.type}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-          </div>
-
           {/* Media Partners */}
           <div className="pt-6">
-            <div className="flex items-center gap-2 justify-center mb-6">
+            <div className="flex items-center gap-2 justify-center mb-8">
               <Radio className="text-luxury-gold/60" size={15} />
               <h4 className="text-[11px] uppercase tracking-[0.3em] font-extrabold text-gray-500">
                 Media & Press Partners
