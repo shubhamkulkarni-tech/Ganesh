@@ -123,15 +123,6 @@ export default function Hero({ onOpenModal }: HeroProps) {
             <MapPin className="text-luxury-gold" size={18} />
             <span>DoubleTree by Hilton, Cape Town</span>
           </div>
-          <div className="flex items-center gap-1.5 opacity-80">
-            {/* Country flags represented via text/emojis beautifully or as visual blocks */}
-            <span className="text-base" title="South Africa">🇿🇦</span>
-            <span className="text-base" title="Nigeria">🇳🇬</span>
-            <span className="text-base" title="Uganda">🇺🇬</span>
-            <span className="text-base" title="Kenya">🇰🇪</span>
-            <span className="text-base" title="United Kingdom">🇬🇧</span>
-            <span className="text-base" title="United Arab Emirates">🇦🇪</span>
-          </div>
         </motion.div>
 
         {/* Countdown Timer */}
