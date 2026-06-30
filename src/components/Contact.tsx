@@ -62,7 +62,7 @@ export default function Contact() {
     <section id="contact" className="relative py-24 bg-luxury-darker overflow-hidden px-6 md:px-12 border-t border-gold-500/10">
       <div 
         className="absolute inset-0 bg-cover bg-center z-0 opacity-8 pointer-events-none"
-        style={{ backgroundImage: "url('networking_lounge.png')" }}
+        style={{ backgroundImage: "url('/networking_lounge.jpg')" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-luxury-dark/90 via-luxury-darker/95 to-luxury-dark/90 z-0 pointer-events-none" />
 

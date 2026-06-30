@@ -29,7 +29,7 @@ export default function Footer() {
     <footer className="relative bg-[#02040f] text-gray-400 text-xs py-16 border-t border-gold-500/15">
       <div 
         className="absolute inset-0 bg-cover bg-center z-0 opacity-5 pointer-events-none"
-        style={{ backgroundImage: "url('networking_lounge.png')" }}
+        style={{ backgroundImage: "url('/networking_lounge.jpg')" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-luxury-darker/95 via-luxury-dark/98 to-luxury-darker/95 z-0 pointer-events-none" />
 

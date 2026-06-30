@@ -7,12 +7,12 @@ export default function Gallery() {
 
   const images = [
     {
-      url: 'awards_stage.png',
+      url: '/awards_stage.jpg',
       title: 'Grand Awards Stage',
       desc: 'The official GILS main stage setup with cinematic gold lighting effects.'
     },
     {
-      url: 'gold_trophy.png',
+      url: '/gold_trophy.jpg',
       title: 'GILS Excellence Trophy',
       desc: 'The solid gold-plated GILS trophy designed by luxury artisans.'
     },
@@ -27,12 +27,12 @@ export default function Gallery() {
       desc: 'Global technology executives discussing generative AI governance models.'
     },
     {
-      url: 'gala_dinner.png',
+      url: '/gala_dinner.jpg',
       title: 'Gala Dinner Banquet',
       desc: 'VIP dining setup inside the DoubleTree Ballroom with custom table florals.'
     },
     {
-      url: 'award_winner.png',
+      url: '/award_winner.jpg',
       title: 'Award Laureates Group',
       desc: 'Winners of the GILS 2026 summit celebrating their category trophies.'
     },
@@ -66,7 +66,7 @@ export default function Gallery() {
     <section id="gallery" className="relative py-24 bg-luxury-darker overflow-hidden px-6 md:px-12 border-t border-gold-500/10">
       <div 
         className="absolute inset-0 bg-cover bg-center z-0 opacity-8 pointer-events-none"
-        style={{ backgroundImage: "url('gold_trophy.png')" }}
+        style={{ backgroundImage: "url('/gold_trophy.jpg')" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-luxury-dark/90 via-luxury-darker/95 to-luxury-dark/90 z-0 pointer-events-none" />
 

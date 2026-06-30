@@ -120,7 +120,7 @@ export default function Sponsors() {
     <section id="sponsors" className="relative py-24 bg-luxury-dark overflow-hidden px-6 md:px-12 border-t border-gold-500/10">
       <div 
         className="absolute inset-0 bg-cover bg-center z-0 opacity-5 pointer-events-none"
-        style={{ backgroundImage: "url('networking_lounge.png')" }}
+        style={{ backgroundImage: "url('/networking_lounge.jpg')" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-luxury-darker/95 via-luxury-dark/98 to-luxury-darker/95 z-0 pointer-events-none" />
 
