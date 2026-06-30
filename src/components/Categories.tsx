@@ -68,11 +68,11 @@ export default function Categories({ onOpenModal }: CategoriesProps) {
 
   return (
     <section id="categories" className="relative py-24 bg-luxury-darker overflow-hidden px-6 md:px-12 border-t border-gold-500/10">
+      <div className="absolute inset-0 bg-gradient-to-b from-luxury-dark/90 via-luxury-darker/95 to-luxury-dark/90 z-0 pointer-events-none" />
       <div 
-        className="absolute inset-0 bg-cover bg-center z-0 opacity-20 pointer-events-none"
+        className="absolute inset-0 bg-cover bg-center z-0 opacity-25 pointer-events-none"
         style={{ backgroundImage: "url('/awards_stage.jpg')" }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-luxury-dark/90 via-luxury-darker/95 to-luxury-dark/90 z-0 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto z-10">
         
